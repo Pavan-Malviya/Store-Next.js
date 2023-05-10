@@ -3,6 +3,6 @@ export type ProductType = {
     unit_amount: number | null,
     image: string,
     id: string,
-    description: string,
+    description: string | null,
     currency: string,
 }
