@@ -1,6 +1,7 @@
 import './globals.css'
 import { Inter } from 'next/font/google'
-import Nav from './components/nav'
+import Nav from './components/Nav'
+import Hydrate from './components/Hydrate'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -17,8 +18,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className='mx-10 md:mx-32'>
+        <Hydrate>
         <Nav/>
         {children}
+        </Hydrate>
         </body>
     </html>
   )

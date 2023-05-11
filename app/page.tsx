@@ -11,6 +11,7 @@ const getProduct = async () => {
               const prices = await stripe.prices.list({
                 product: product.id
               })
+              const features= product.metadata.features || ""
               return {
                 id: product.id,
                 name: product.name,
@@ -18,6 +19,8 @@ const getProduct = async () => {
                 image: product.images[0],
                 unit_amount: prices.data[0].unit_amount,
                 currency: prices.data[0].currency,
+                metadata: {features}
+                
               }
             })
            
