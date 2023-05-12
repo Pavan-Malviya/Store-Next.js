@@ -2,7 +2,7 @@ import {create} from "zustand"
 import {persist} from 'zustand/middleware'
 import { AddCartType } from "./types/CartType"
 
-type CartItem = {
+type cartItem = {
     name: string,
     id: string, 
     images?: [],
@@ -37,7 +37,7 @@ export const useCartStore = create<CartState>()(
             if (existingItem) {
               const updatedCart = state.cart.map((cartItem) => {
                 if (cartItem.id === item.id) {
-                  return { ...cartItem, quantity:cartItem.quantity  };
+                  return { ...cartItem, quantity:cartItem.quantity + 1  };
                 }
                 return cartItem;
               });
