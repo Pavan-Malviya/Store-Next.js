@@ -18,6 +18,7 @@ type CartState = {
     clearCart: () => void
     addProduct: (item:AddCartType) => void,
     removeProduct: (item:AddCartType) => void,
+
 }
 
 
