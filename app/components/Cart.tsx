@@ -9,13 +9,14 @@ export default function Cart(){
             <div onClick={(e) => e.stopPropagation()} className="bg-white absolute right-0 top-0 w-1/4 h-screen p-12 overflow-y-scroll text-gray-700">
             <h1 className="font-bold mb-4">Heres is yours shopping list</h1>
            {
+            
             cartStore.cart.map((item) => (
-                <div flex py-4 gap-4>
+                <div key ={item.id} className="flex py-2 gap-4">
                     <Image className="rounded-md h-28" src={item.image} alt={item.name} width={120} height={120} />
                 <div className="font-bold">
                     <h2>{item.name}</h2>
                     <h2>Quantity: {item.quantity}</h2>
-                    <h4>{FormatPrice(item.unit_amount)}</h4>
+                    <p className="font-bold text-teal-800">{item.unit_amount && FormatPrice(item.unit_amount)}</p>
                 </div>
             </div>
             )) }
