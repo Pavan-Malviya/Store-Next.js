@@ -14,7 +14,7 @@ export default function Nav(){
 
        <div className="flex justify-between items-center py-8">
          <Link href={"/"}>
-        <h1 className=" text-2xl text-teal-600">Store</h1>
+        <p className=" text-2xl text-teal-600">Store</p>
         </Link>
         <ul>
             {/* toggle the cart */}
@@ -29,8 +29,7 @@ export default function Nav(){
         
         </ul>
 
-      
-       <p> {cartStore.isOpen && <Cart/>}</p>
+       {cartStore.isOpen && <Cart/>}
        </div>
         
     )
