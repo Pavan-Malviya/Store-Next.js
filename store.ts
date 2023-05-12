@@ -7,8 +7,8 @@ type CartItem = {
     id: string, 
     images?: [],
     description?: string,
-    unit_amount?: number,
-    quantity?: number,
+    unit_amount?: number | 1,
+    quantity: number
 }
 
 type CartState = {
@@ -37,7 +37,7 @@ export const useCartStore = create<CartState>()(
             if (existingItem) {
               const updatedCart = state.cart.map((cartItem) => {
                 if (cartItem.id === item.id) {
-                  return { ...cartItem, quantity:cartItem.quantity + 1 };
+                  return { ...cartItem, quantity:cartItem.quantity  };
                 }
                 return cartItem;
               });

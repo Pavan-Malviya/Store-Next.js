@@ -9,6 +9,7 @@ type SearchParams = {
     description: string | null,
     currency: string,
     features: string,
+    quantity?: number | 1
     
 }
 

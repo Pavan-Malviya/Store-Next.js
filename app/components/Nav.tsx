@@ -8,7 +8,7 @@ import {AiFillShopping} from "react-icons/ai"
 
 
 
-export default function Navbar(){
+export default function Nav(){
     const cartStore = useCartStore()
     return (
 
