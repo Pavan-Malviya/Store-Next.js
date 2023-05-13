@@ -2,9 +2,9 @@ import './globals.css'
 import { Inter } from 'next/font/google'
 import Hydrate from './components/Hydrate'
 import Nav from './components/Nav'
+import { Roboto, Lobster_Two } from 'next/font/google'
 
-
-const inter = Inter({ subsets: ['latin'] })
+const roboto = Roboto({weight:["400", "500", "700"], subsets: ['latin']})
 
 export const metadata = {
   title: 'Create Next App',
@@ -18,7 +18,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className='mx-10 md:mx-32'>
+      <body className={`mx-32 ${roboto.className}`}>
         <Hydrate>
         <Nav />
         {children}

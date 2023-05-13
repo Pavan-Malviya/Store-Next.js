@@ -8,8 +8,8 @@ export default async function Product({searchParams}: SearchParamsType){
     
 
     return(
-        <div className="flex justify-between gap-24 p-12 text-gray-700">
-             <Image src={searchParams.image} alt={searchParams.name}  width={300} height={300}/>
+        <div className="flex flex-col md:flex-row justify-between gap-12 md:gap-20 p-8 text-gray-700">
+             <Image src={searchParams.image} alt={searchParams.name}  width={200} height={200} className="w-72 h-80  rounded-sm"/>
 
             <div className="font-medium text-gray-700 ">
                 <h1 className="text-2xl py-2 ">
