@@ -18,7 +18,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`mx-32 ${roboto.className}`}>
+      <body className={`mx-4 md:mx-16 lg:mx-32 ${roboto.className} `}>
         <Hydrate>
         <Nav />
         {children}
