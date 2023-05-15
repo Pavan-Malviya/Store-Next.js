@@ -15,13 +15,13 @@ export default function Nav(){
 
        <nav className="flex justify-between items-center py-8">
          <Link href={"/"}>
-        <p className=" text-2xl text-teal-600">Store</p>
+        <p className=" text-2xl text-primary">Store</p>
         </Link>
         <ul>
             {/* toggle the cart */}
         <li onClick={() => {
             cartStore.toggleCart()
-        }}  className="flex items-center text-3xl relative cursor-pointer">
+        }}  className="flex items-center text-3xl relative cursor-pointer text-primary">
             <AiFillShopping/>
 
             {/* animation added to cart length */}

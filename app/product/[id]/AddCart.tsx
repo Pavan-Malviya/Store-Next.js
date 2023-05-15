@@ -10,7 +10,7 @@ export default function AddCart({name, id, unit_amount, image, quantity} : AddCa
     return(
         <>
          <button onClick={()=> cartStore.addProduct({ id, name, unit_amount, image, quantity})}
-          className="my-12 text-white py-2 px-6 font-medium rounded-md bg-teal-700">Add to Cart</button>
+          className="my-4 btn btn-primary w-80">Add to Cart</button>
         </>
     )
 }

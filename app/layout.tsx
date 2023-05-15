@@ -17,8 +17,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={`mx-4 md:mx-16 lg:mx-32 ${roboto.className} `}>
+    <html  lang="en" data-theme="light">
+      <body className={`mx-4 md:mx-16 lg:mx-32 ${roboto.className}`}>
         <Hydrate>
         <Nav />
         {children}
