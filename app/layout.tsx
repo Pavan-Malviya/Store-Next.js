@@ -22,6 +22,7 @@ export default async function RootLayout({
   // console.log(session);
   return (
     <html lang="en" data-theme="light">
+      <meta name="google-site-verification" content="snFxODc87pTOWXI-ibxiCGRYuesn8Rg_Gyuxqx35080" />
       <body className={`mx-4 md:mx-16 lg:mx-32 ${roboto.className}`}>
         <Hydrate>
           <Nav user={session?.user} expires={session?.expires as string} />
